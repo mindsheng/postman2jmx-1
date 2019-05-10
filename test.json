@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "8401758e-68b4-4d7c-881e-f8612bd3a271",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getDemo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://test?getparm=getvalue",
+					"protocol": "http",
+					"host": [
+						"test"
+					],
+					"query": [
+						{
+							"key": "getparm",
+							"value": "getvalue",
+							"description": "getdescr"
+						}
+					]
+				},
+				"description": "desc"
+			},
+			"response": []
+		},
+		{
+			"name": "postdemo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "formkey",
+							"value": "formval",
+							"description": "formdesc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://test?postparm=postval",
+					"protocol": "http",
+					"host": [
+						"test"
+					],
+					"query": [
+						{
+							"key": "postparm",
+							"value": "postval",
+							"description": "postdesc"
+						}
+					]
+				},
+				"description": "desc"
+			},
+			"response": []
+		},
+		{
+			"name": "postdemo json",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"key\": \"value\"}"
+				},
+				"url": {
+					"raw": "http://test?postparm=postval",
+					"protocol": "http",
+					"host": [
+						"test"
+					],
+					"query": [
+						{
+							"key": "postparm",
+							"value": "postval",
+							"description": "postdesc"
+						}
+					]
+				},
+				"description": "desc"
+			},
+			"response": []
+		}
+	]
+}
